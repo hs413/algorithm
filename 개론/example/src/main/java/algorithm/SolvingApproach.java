@@ -9,7 +9,7 @@ import java.util.Map;
  * */
 public class SolvingApproach {
     public static void main(String[] args) {
-    Map<String, Integer> result = charCount("HELLOD ODIFI COI 1 ! $ C__");
+        Map<String, Integer> result = charCount("HELLOD ODIFI COI 1 ! $ C__");
         return;
     }
 
