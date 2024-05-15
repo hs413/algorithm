@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static algorithm.patterns.FrequencyCounter.same;
+import static algorithm.patterns.FrequencyCounter.validAnagram;
+import static org.assertj.core.api.Assertions.*;
 
 public class FrequencyCounterTest {
     @Test
@@ -16,16 +18,18 @@ public class FrequencyCounterTest {
         List<Integer> arr2 = List.of(1,4,9);
         boolean result = same(arr1, arr2);
 
-        Assertions.assertThat(result).isTrue();
+        assertThat(result).isTrue();
     }
 
     @Test
     public void validAnagramTest() {
-
-
-
-
-
-
+        assertThat(validAnagram("" ,"")).isTrue();
+        assertThat(validAnagram("aaz","zza")).isFalse();
+        assertThat(validAnagram("anagram","nagaram")).isTrue();
+        assertThat(validAnagram("rat","car")).isFalse();
+        assertThat(validAnagram("awesome","awesom")).isFalse();
+        assertThat(validAnagram("amanaplanacanalpanama","acanalmanplanpamana")).isFalse();
+        assertThat(validAnagram("qwerty","qeywrt")).isTrue();
+        assertThat(validAnagram("texttwisttime","timetwisttext")).isTrue();
     }
 }

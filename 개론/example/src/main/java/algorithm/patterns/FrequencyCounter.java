@@ -55,13 +55,26 @@ public class FrequencyCounter {
 
     /**
      * 두 개의 문자열이 주어졌을 때,
-     * 두 번째 문자열이 첫 번째 문자열의 애너그램인지 확인하는 함수를 작성합니다.
-     * 애너그램은 다른 글자의 글자를 재배열하여 형성된 단어, 구 또는 이름입니다.
+     * 두 번째 문자열이 첫 번째 문자열의 애너그램인지 확인하는 함수를 작성
+     * 애너그램은 다른 글자의 글자를 재배열하여 형성된 단어, 구 또는 이름
      * (예시: cinema -> iceman)
      */
     public static boolean validAnagram(String str1, String str2) {
+        if (str1.length() != str2.length()) return false;
 
+        Map<String, Integer> map = new HashMap<>();
 
+        for (String val : str1.split("")) {
+            map.put(val, map.getOrDefault(val, 0) + 1);
+        }
+
+        for (String val : str2.split("")) {
+            int findValue = map.getOrDefault(val, 0);
+
+            if (findValue == 0) return false;
+
+            map.put(val, findValue - 1);
+        }
 
         return true;
     }
