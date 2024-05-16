@@ -1,4 +1,4 @@
-package algorithm.patterns;
+package patterns;
 
 /**
  * 분할 정복 패턴

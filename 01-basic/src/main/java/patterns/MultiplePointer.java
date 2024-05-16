@@ -1,4 +1,4 @@
-package algorithm.patterns;
+package patterns;
 
 import java.util.List;
 import java.util.Objects;

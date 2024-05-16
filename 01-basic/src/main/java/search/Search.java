@@ -1,4 +1,4 @@
-package algorithm.search;
+package search;
 
 public class Search {
 

@@ -1,13 +1,12 @@
-package algorithm.patterns;
+package patterns;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static algorithm.patterns.FrequencyCounter.same;
-import static algorithm.patterns.FrequencyCounter.validAnagram;
+import static patterns.FrequencyCounter.same;
+import static patterns.FrequencyCounter.validAnagram;
 import static org.assertj.core.api.Assertions.*;
 
 public class FrequencyCounterTest {

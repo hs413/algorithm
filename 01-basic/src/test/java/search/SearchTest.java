@@ -1,8 +1,8 @@
-package algorithm.search;
+package search;
 
 import org.junit.jupiter.api.Test;
 
-import static algorithm.search.Search.*;
+import static search.Search.*;
 import static org.assertj.core.api.Assertions.*;
 
 

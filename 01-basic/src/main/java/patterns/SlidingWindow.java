@@ -1,4 +1,4 @@
-package algorithm.patterns;
+package patterns;
 
 /**
  * 배열이나 문자열같은 데이터를 입력하거나

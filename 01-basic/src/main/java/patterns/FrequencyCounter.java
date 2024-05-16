@@ -1,4 +1,4 @@
-package algorithm.patterns;
+package patterns;
 
 import java.util.HashMap;
 import java.util.List;

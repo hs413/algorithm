@@ -34,3 +34,21 @@
 
 - O(1) - boolean, 숫자 등은 불변 공간이다.
 - O(n) - 문자열, 객체 등은 n의 공간을 차지한다.
+
+## [문제 해결 접근법](README2.md)
+
+## 문제 해결 패턴
+
+### [Frequency Counters](src/main/java/patterns/FrequencyCounter.java) - [Test](src/test/java/patterns/FrequencyCounterTest.java)
+
+### [Multiple Pointer](src/main/java/patterns/MultiplePointer.java) - [Test](src/test/java/patterns/MultiplePointerTest.java)
+
+### [Sliding Window](src/main/java/patterns/SlidingWindow.java) - [Test](src/test/java/patterns/SlidingWindowTest.java)
+
+### [Divide And Conquer](src/main/java/patterns/DivideConquer.java)
+
+## 재귀 / 검색
+### [재귀](src/main/java/recursion/Recursion.java) - [Test](src/test/java/recursion/RecursionTest.java)
+
+### [검색](src/main/java/search/Search.java) - [Test](src/test/java/search/searchTest.java)
+

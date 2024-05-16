@@ -1,9 +1,9 @@
-package algorithm.recursion;
+package recursion;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static algorithm.recursion.Recursion.*;
+import static recursion.Recursion.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 

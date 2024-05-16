@@ -1,4 +1,4 @@
-package algorithm.patterns;
+package patterns;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static algorithm.patterns.MultiplePointer.*;
+import static patterns.MultiplePointer.*;
 import static org.assertj.core.api.Assertions.*;
 
 

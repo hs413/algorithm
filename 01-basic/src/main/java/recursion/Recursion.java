@@ -1,4 +1,4 @@
-package algorithm.recursion;
+package recursion;
 
 /**
  * 메서드(함수)가 자기 자신을 호출하는 것
