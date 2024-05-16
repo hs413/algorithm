@@ -137,4 +137,33 @@ public class SinglyLinkedList<T> {
 
         return true;
     }
+
+    public T remove(int index) {
+        if (index < 0 || index >= this.length) return null;
+        if (index == this.length - 1) return this.pop();
+        if (index == 0) return this.shift();
+
+        Node<T> previousNode = this.getNode(index - 1);
+        Node<T> removed = previousNode.next;
+        previousNode.next = removed.next;
+        this.length--;
+        return removed.val;
+    }
+
+    public SinglyLinkedList<T> reverse() {
+        Node<T> node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        Node<T> next;
+        Node<T> prev = null;
+
+        for (int i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return this;
+    }
 }

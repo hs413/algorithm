@@ -1,7 +1,5 @@
 package list;
 
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -113,6 +111,38 @@ class SinglyLinkedListTest {
         list.push(4);
 
         assertThat(list.insert(2, 5)).isTrue();
+        assertThat(list.length).isEqualTo(5);
         assertThat(list.get(3)).isEqualTo(3);
+
+        assertThat(list.insert(5, 6)).isTrue();
+        assertThat(list.get(5)).isEqualTo(6);
+    }
+
+    @Test
+    public void remove() {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+
+        assertThat(list.remove(-1)).isNull();
+        assertThat(list.remove(5)).isNull();
+
+        assertThat(list.remove(2)).isEqualTo(3);
+        assertThat(list.length).isEqualTo(4);
+        assertThat(list.remove(0)).isEqualTo(1);
+
+    }
+
+    @Test
+    public void reverse() {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+        list.reverse();
+        assertThat(list.get(0)).isEqualTo(5);
     }
 }
