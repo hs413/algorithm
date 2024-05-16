@@ -8,3 +8,6 @@
 
 ### [Selection Sort Test](src/test/java/sorting/SelectionSortTest.java)
 
+## [Insertion Sort](src/main/java/sorting/InsertionSort.java)
+
+### [Insertion Sort Test](src/test/java/sorting/InsertionSortTest.java)
