@@ -1,28 +1,5 @@
 # DATA STRUCTURE
 
-### [Single Linked List](src/main/java/list/SinglyLinkedList.java) - [Test](src/test/java/list/SinglyLinkedListTest.java)
-- 인덱스가 없음
-  - 순차적으로 데이터에 접근
-  - 랜덤 엑세스 불가능
-- 삽입과 삭제가 용이하다 
+## [선형](linear.md)
 
-#### 시간 복잡도
-
-- 삽입 - O(1)
-- 삭제 - O(1) or O(n)
-- 검색 - O(n)
-- 조회 - O(n)
-
-### [Double Linked List](src/main/java/list/DoublyLinkedList.java) - [Test](src/test/java/list/DoublyLinkedListTest.java)
-
-- 단일 연결 리스트에서 이전 노드를 가리키는 포인터가 추가된 연결 리스트
-- 포인터가 늘어나기 때문에 메모리가 더 많이 사용된다.
- 
-#### 시간 복잡도
-
-- 삽입 - O(1)
-- 삭제 - O(1)
-- 검색 - O(n)
-- 조회 - O(n)
-- 검색은 n / 2로 찾을 수 있지만 O(n)으로 표기한다
-
+## [트리](trees.md)

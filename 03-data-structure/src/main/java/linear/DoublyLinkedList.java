@@ -1,4 +1,4 @@
-package list;
+package linear;
 
 public class DoublyLinkedList<T> {
     Node<T> head;

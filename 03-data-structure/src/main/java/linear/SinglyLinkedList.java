@@ -1,4 +1,4 @@
-package list;
+package linear;
 
 public class SinglyLinkedList<T> {
     Node<T> head;
