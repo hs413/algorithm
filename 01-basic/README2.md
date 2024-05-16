@@ -96,8 +96,7 @@ charCount(null)
 ### 단순화
 - 단순한 해결책을 먼저 작성 후 가능하다면 어려운 부분을 통합
 
-**해당 섹션의 예제는 [example/src/main/java/algorithm/SolvingApproach.java](example/src/main/java/algorithm/SolvingApproach.java) 에 작
-성**
+### [예제](src/main/java/SolvingApproach.java)
 
 ## 5단계 재검토 및 리팩터링
 
