@@ -100,7 +100,9 @@ public class SinglyLinkedList<T> {
     }
 
     public T get(int index) {
-        return this.getNode(index).val;
+        Node<T> node = this.getNode(index);
+        if (node == null) return null;
+        return node.val;
     }
 
     public boolean set(int index, T val) {
@@ -165,5 +167,19 @@ public class SinglyLinkedList<T> {
             node = next;
         }
         return this;
+    }
+
+    class Node<T> {
+        public T val;
+        public Node<T> next;
+
+        public Node(T val) {
+            this(val, null);
+        }
+
+        public Node(T val, Node<T> next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }
