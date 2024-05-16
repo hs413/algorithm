@@ -2,6 +2,9 @@
 
 ## [Bubble Sort](src/main/java/sorting/BubbleSort.java)
 
-### [Test](src/test/java/sorting/BubbleSortTest.java)
+### [Bubble Sort Test](src/test/java/sorting/BubbleSortTest.java)
 
+## [Selection Sort](src/main/java/sorting/SelectionSort.java)
+
+### [Selection Sort Test](src/test/java/sorting/SelectionSortTest.java)
 
