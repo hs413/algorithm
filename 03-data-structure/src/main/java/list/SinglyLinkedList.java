@@ -85,4 +85,56 @@ public class SinglyLinkedList<T> {
         this.length++;
         return this;
     }
+
+    public Node<T> getNode(int index) {
+        if (index < 0 || index >= this.length) return null;
+
+        int counter = 0;
+        Node<T> current = this.head;
+        while(counter != index) {
+            current = current.next;
+            counter++;
+        }
+
+        return current;
+    }
+
+    public T get(int index) {
+        return this.getNode(index).val;
+    }
+
+    public boolean set(int index, T val) {
+        Node<T> foundNode = this.getNode(index);
+
+        if (foundNode != null) {
+            foundNode.val = val;
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean insert(int index, T val) {
+        if (index < 0 || index > this.length) return false;
+
+        if (index == 0) {
+            this.unshift(val);
+            return true;
+        }
+
+        if (index == this.length) {
+            this.push(val);
+            return true;
+        }
+
+        Node<T> newNode = new Node<T>(val);
+        Node<T> prev = this.getNode(index - 1);
+        Node<T> next = prev.next;
+
+        prev.next = newNode;
+        newNode.next = next;
+        this.length++;
+
+        return true;
+    }
 }

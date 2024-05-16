@@ -72,4 +72,47 @@ class SinglyLinkedListTest {
         assertThat(list.head.next.val).isEqualTo(1);
         assertThat(list.tail.val).isEqualTo(1);
     }
+
+    @Test
+    public void get() {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+        list.push(6);
+        list.push(33);
+
+        assertThat(list.get(0)).isEqualTo(1);
+        assertThat(list.get(6)).isEqualTo(33);
+        assertThat(list.get(10)).isNull();
+    }
+
+    @Test
+    public void set() {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+        list.push(5);
+        list.push(6);
+        list.push(33);
+
+        assertThat(list.set(6, 123)).isTrue();
+        assertThat(list.get(6)).isEqualTo(123);
+
+        assertThat(list.set(8, 498)).isFalse();
+        assertThat(list.set(-1, 498)).isFalse();
+    }
+
+    @Test
+    public void insert() {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+
+        assertThat(list.insert(2, 5)).isTrue();
+        assertThat(list.get(3)).isEqualTo(3);
+    }
 }
