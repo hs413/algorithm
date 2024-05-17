@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class graphTraversalTest {
@@ -59,5 +58,19 @@ class graphTraversalTest {
         List<String> result = traversal.dfsIterative(g, "A");
         assertThat(result).containsSequence("A", "C", "E", "F", "D", "B");
 //        assertThat(result).containsSequence("A", "B", "D", "E", "C", "F");
+    }
+
+    @Test
+    public void bfs() {
+        /**
+         * A -> B, C
+         * B -> A, D
+         * C -> A, E
+         * D -> B, E, F
+         * E -> C, D, F
+         * F -> D, E
+         * */
+        List<String> result = traversal.bfs(g, "A");
+        assertThat(result).containsSequence("A", "B", "C", "D", "E", "F");
     }
 }

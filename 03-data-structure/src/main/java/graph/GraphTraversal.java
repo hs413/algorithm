@@ -51,7 +51,28 @@ public class GraphTraversal {
         return result;
     }
 
+    public List<String> bfs(Graph g, String vertex) {
+        Set<String> visited = new HashSet<>();
+        List<String> result = new ArrayList<>();
+        Queue<String> queue = new LinkedList<>();
+
+        visited.add(vertex);
+        queue.add(vertex);
+
+        while(!queue.isEmpty()) {
+            String currentVertex = queue.poll();
+            result.add(currentVertex);
+
+            for (String s : g.adjacencyList.get(currentVertex)) {
+                if (visited.contains(s)) continue;
+
+                visited.add(s);
+                queue.add(s);
+            }
+        }
 
 
+        return result;
+    }
 
 }

@@ -16,7 +16,9 @@
 
 ## [그래프 순회](src/main/java/graph/graphTraversal.java) - [Test](src/test/java/graph/graphTraversalTest.java)
 - 시작점을 정해야 한다
-- 방문 했던 노드의 정보를 갖고 있어야 한다 
+- 방문 했던 노드의 정보를 갖고 있어야 한다
 
-### 깊이 우선 탐색
-- 인접한 노드를 먼저 탐색
+- 깊이 우선 탐색
+  - 재귀
+  - 순환형
+- 너비 우선 탐색
