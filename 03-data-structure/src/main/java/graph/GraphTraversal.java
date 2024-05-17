@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GraphTraversal {
 
@@ -31,8 +28,28 @@ public class GraphTraversal {
         }
     }
 
+    public List<String> dfsIterative(Graph g, String vertex) {
+        Stack<String> stack = new Stack<>();
+        Map<String, Boolean> visited = new HashMap<>();
+        List<String> result = new ArrayList<>();
 
+        stack.push(vertex);
+        visited.put(vertex, true);
 
+        while (!stack.isEmpty()) {
+            String currentVertex = stack.pop();
+            result.add(currentVertex);
+
+            for (String s : g.adjacencyList.get(currentVertex)) {
+                if (visited.getOrDefault(s, false)) continue;
+
+                visited.put(s, true);
+                stack.push(s);
+            }
+        }
+
+        return result;
+    }
 
 
 
