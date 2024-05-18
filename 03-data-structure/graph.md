@@ -22,3 +22,6 @@
   - 재귀
   - 순환형
 - 너비 우선 탐색
+
+## [Dijkstra Algorithm](src/main/java/graph/DijkstraAlgorithm.java) - [Test](src/test/java/graph/DijkstraAlgorithmTest.java)
+- 그래프의 두 정점 사이에 존재하는 최단 경로를 찾는 알고리즘
