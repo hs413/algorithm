@@ -26,7 +26,7 @@
 - 피보나치 수열의 가장 간단한 해결법은 재귀를 사용하는 방법
 - 시간 복잡도 **O(2^n)** - 성능이 매우 안좋음
 
-## [DynamicPrograming](src/main/java/dp/DynamicPrograming.java) - [Test](src/test/java/dp/DynamicProgramingTest.java)
+## [DynamicPrograming](../src/main/java/dp/DynamicPrograming.java) - [Test](../src/test/java/dp/DynamicProgramingTest.java)
 
 ### Memoization
 - 이전 계산 값을 메모리에 저장해두어 동일한 계산의 반복 수행을 제거해 시간을 단축하는 기법

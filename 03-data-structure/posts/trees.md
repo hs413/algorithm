@@ -12,7 +12,7 @@
   - 리프노드: 자식이 없는 노드
   - 엣지(간선): 노드를 연결하는 선(화살표)
 
-## [이진 탐색 트리 (BST)](src/main/java/trees/BinarySearchTree.java) - [Test](src/test/java/trees/BinarySearchTreeTest.java)
+## [이진 탐색 트리 (BST)](../src/main/java/trees/BinarySearchTree.java) - [Test](../src/test/java/trees/BinarySearchTreeTest.java)
 - 이진 트리의 특성 + 정렬된 데이터를 저장
 - 부모 노드를 기준으로 왼쪽에 있는 자식 노드는 부모 보다 작은 값을 가짐
 - 부모 노드를 기준으로 오른쪽에 있는 자식 노드는 부모 보다 큰 값을 가짐
@@ -26,7 +26,7 @@
 - 자식 노드가 부모 보다 크거나 작은 값만 있는 경우 O(n)이 나올 수도 있다.
 
 
-## [트리 순회](src/main/java/trees/TreeTraversal.java) - [Test](src/test/java/trees/TreeTraversalTest.java)
+## [트리 순회](../src/main/java/trees/TreeTraversal.java) - [Test](../src/test/java/trees/TreeTraversalTest.java)
 - 일반적인 트리에서 노드를 찾기 위한 방법
   - 모든 노드를 순회해야 한다
 - 너비 우선 탐색 (Breadth-first Search, BSF)
@@ -47,7 +47,7 @@
 - 재귀를 사용해 구현
 - 평균적으로 공간 복잡도가 BFS에 비해 낮다
 
-## [힙 (Heap)](src/main/java/trees/MaxBinaryHeap.java) - [Test](src/test/java/trees/MaxBinaryHeapTest.java)
+## [힙 (Heap)](../src/main/java/trees/MaxBinaryHeap.java) - [Test](../src/test/java/trees/MaxBinaryHeapTest.java)
 - 완전 이진 트리를 기반으로 한 자료구조
 - 최대 힙과 최소 힙이 있다
   - 최대 힙: 부모 노드가 항상 자식 노드보다 큰 값을 가지는 이진 트리 
@@ -67,7 +67,7 @@
 - 삭제 - O(log n)
 - 탐색 - O(n)
 
-### [우선 순위 큐](src/main/java/trees/PriorityQueue.java) - [Test](src/test/java/trees/PriorityQueueTest.java)
+### [우선 순위 큐](../src/main/java/trees/PriorityQueue.java) - [Test](../src/test/java/trees/PriorityQueueTest.java)
 - 각 요소가 우선순위를 가지는 자료 구조
 - 높은 우선순위를 먼저 처리
 - 힙을 이용하여 구현
