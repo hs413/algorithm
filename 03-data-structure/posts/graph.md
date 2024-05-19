@@ -14,7 +14,7 @@
   - 배열이나 해시 테이블을 사용해 노드의 관계를 표현
   - 공간 복잡도가 낮다
 
-## [그래프 순회](../src/main/java/graph/graphTraversal.java) - [Test](../src/test/java/graph/graphTraversalTest.java)
+## [그래프 순회](../src/main/java/graph/GraphTraversal.java) - [Test](../src/test/java/graph/graphTraversalTest.java)
 - 시작점을 정해야 한다
 - 방문 했던 노드의 정보를 갖고 있어야 한다
 
