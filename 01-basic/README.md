@@ -50,5 +50,5 @@
 ## 재귀 / 검색
 ### [재귀](src/main/java/recursion/Recursion.java) - [Test](src/test/java/recursion/RecursionTest.java)
 
-### [검색](src/main/java/search/Search.java) - [Test](src/test/java/search/searchTest.java)
+### [검색](src/main/java/search/Search.java) - [Test](src/test/java/search/SearchTest.java)
 
