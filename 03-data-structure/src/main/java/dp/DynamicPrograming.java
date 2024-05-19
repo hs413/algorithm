@@ -10,9 +10,8 @@ public class DynamicPrograming {
         return fib(n - 1) + fib(n - 2);
     }
 
-
     /**
-     * Memoized을 활용한 동적 프로그래밍 피보나치 함수
+     * Memoization을 활용한 동적 프로그래밍 피보나치 함수
      * O(n)
      * */
     public static int fibMemoized(int n) {
@@ -36,4 +35,20 @@ public class DynamicPrograming {
         return result;
     }
 
+    /**
+     * Tabulation을 활용한 동적 프로그래밍 피보나치 함수
+     * O(n)
+     * */
+    public static int fibTabulated(int n) {
+        if (n <= 2) return 1;
+        Integer[] fibNums = new Integer[n + 1];
+        fibNums[1] = 1;
+        fibNums[2] = 1;
+
+        for (int i = 3; i <= n; i++) {
+            fibNums[i] = fibNums[i - 1] + fibNums[i - 2];
+        }
+
+        return fibNums[n];
+    }
 }

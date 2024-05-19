@@ -13,7 +13,7 @@ class DynamicProgramingTest {
         assertThat(DynamicPrograming.fib(6)).isEqualTo(8);
         assertThat(DynamicPrograming.fib(7)).isEqualTo(13);
 
-        // 시간이 너무 오래 걸림, 사실상 불가능
+        // 시간이 너무 오래 걸림
 //        DynamicPrograming.fibMemoized(100);
     }
 
@@ -25,5 +25,17 @@ class DynamicProgramingTest {
         assertThat(DynamicPrograming.fibMemoized(7)).isEqualTo(13);
 
         DynamicPrograming.fibMemoized(100);
+        // 메모리 오류
+//        DynamicPrograming.fibTabulated(10000000);
+    }
+
+    @Test
+    public void fibTabulated() {
+        assertThat(DynamicPrograming.fibTabulated(4)).isEqualTo(3);
+        assertThat(DynamicPrograming.fibTabulated(5)).isEqualTo(5);
+        assertThat(DynamicPrograming.fibTabulated(6)).isEqualTo(8);
+        assertThat(DynamicPrograming.fibTabulated(7)).isEqualTo(13);
+
+        DynamicPrograming.fibTabulated(10000000);
     }
 }
