@@ -34,4 +34,55 @@ public class DivideConquer {
         return arr.length - start;
     }
 
+
+    /**
+     * Method: sortedFrequency
+     * Input
+     *  - 정렬된 배열, 숫자
+     * Output
+     *  - 배열 안에 있는 해당 숫자의 개수
+     * Ex)
+     *  - sortedFrequency([1,1,2,2,2,2,3],2) // 4
+     *  - sortedFrequency([1,1,2,2,2,2,3],3) // 1
+     *  - sortedFrequency([1,1,2,2,2,2,3],1) // 2
+     *  - sortedFrequency([1,1,2,2,2,2,3],4) // -1
+     * Time Complexity
+     *  - O(log n)
+     * */
+    public static int sortedFrequency(int[] arr, int num) {
+        int start = 0;
+        int start2 = 0;
+        int end = arr.length - 1;
+        int end2 = end;
+
+        int s = -1;
+        int e = end;
+        while (start <= end) {
+            // 시작 idx 찾기
+            int middle = (start + end) / 2;
+            if (num <= arr[middle]) {
+                end = middle - 1;
+                if (arr[middle] == num) {
+                    s = middle;
+                }
+            } else {
+                start = middle + 1;
+            }
+
+            // 끝 idx 찾기
+            int middle2 = (start2 + end2) / 2;
+            if (num >= arr[middle2]) {
+                start2 = middle2 + 1;
+                if (arr[middle2] == num) {
+                    e = middle2;
+                }
+            } else {
+                end2 = middle2 - 1;
+            }
+        }
+        if (s == -1) return s;
+
+        return e - s + 1;
+    }
+
 }
