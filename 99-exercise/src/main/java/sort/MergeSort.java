@@ -34,32 +34,32 @@ import java.util.List;
  */
 public class MergeSort {
 
-    public static List<Integer> merge(Integer[] arr1, Integer[] arr2) {
-        List<Integer> list = new ArrayList<>();
+    public static Integer[] merge(Integer[] arr1, Integer[] arr2) {
+        Integer[] result = new Integer[arr1.length + arr2.length];
         int i = 0;
         int j = 0;
 
         while (i < arr1.length && j < arr2.length) {
             if (arr1[i] <= arr2[j]) {
-                list.add(arr1[i]);
+                result[i + j] = arr1[i];
                 i++;
             } else {
-                list.add(arr2[j]);
+                result[i + j] = arr2[j];
                 j++;
             }
         }
 
         while (i < arr1.length) {
-            list.add(arr1[i]);
+            result[i + j] = arr1[i];
             i++;
         }
 
         while (j < arr2.length) {
-            list.add(arr2[j]);
+            result[i + j] = arr2[j];
             j++;
         }
 
-        return list;
+        return result;
     }
 
     public static List<String> merge(String[] arr1, String[] arr2, Comparator<String> comparator) {
@@ -93,5 +93,23 @@ public class MergeSort {
         return list;
     }
 
+    public static Integer[] sort(Integer[] arr) {
+        int length = arr.length;
+        if (length <= 1) return arr;
 
+        int middle = length / 2;
+
+        Integer[] arr1 = new Integer[middle];
+        Integer[] arr2 = new Integer[length - middle];
+
+        for (int i = 0; i < middle; i++) {
+            arr1[i] = arr[i];
+        }
+
+        for (int j = 0, i = middle; i < length; j++, i++) {
+            arr2[j] = arr[i];
+        }
+
+        return merge(sort(arr1), sort(arr2));
+    }
 }
