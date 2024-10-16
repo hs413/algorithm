@@ -40,5 +40,3 @@ joinWord = "".join(numbers)
 
 print(joinWord)
 #123
-
-## strip

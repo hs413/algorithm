@@ -1,8 +1,8 @@
 T = int(input())
 
-for tc in range(T):
+for tc in range(1, T + 1):
     N = int(input())
-    nums = map(int, input().split())
+    nums = list(map(int, input().split()))
 
     # 최소값 최대값
     min = float("INF")
@@ -13,7 +13,10 @@ for tc in range(T):
             min = num
         if max < num:
             max = num
+
+    # 내장함수 이용
+    answer = max(nums) - min(nums)
         
-    print(max - min)
+    print(f"#{tc} {max - min}")
 
  
