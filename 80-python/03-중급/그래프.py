@@ -111,7 +111,7 @@ while stack:
         
     print(trail)
 
-### 인접 행렬 + 스택
+### 인접 리스트 + 스택
 V, E = map(int, input().split())
 
 # 그래프 구조화
