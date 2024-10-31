@@ -64,3 +64,96 @@ print(adj_lst)
 
 # 출력
 # [[1, 4], [2], [], [6], [1, 5], [], [5]]
+
+### 완전 탐색
+# 1. 임의의 정점을 방문한다.
+# 2. 방문한 정점은 다시 방문하지 않도록 기록지에 표시한다.
+# 3. 해당 정점에서 갈 수 있는 모든 정점을 탐색한다(with 인접행렬, 인접리스트)
+# 4. 탐색한 정점들을 방문 예정지에 담는다.
+# 5. 방문 예정지에서 정점을 하나 뽑아서 방문한다.
+# 위 과정을 반복한다.
+
+### 깊이 우선 탐색 DFS 
+# 방문 예정지로 스택을 사용
+
+### 인접 행렬 + 스택
+V, E = map(int, input().split())
+
+# 그래프 구조화
+
+# 1. 빈 판 만들기
+adj_matrix = [[0]* (V+1) for _ in range(V+1)]
+
+# 2. 간선정보 입력받기
+for _ in range(E):
+    s, e = map(int, input().split())
+    adj_matrix[s][e] = 1
+    adj_matrix[e][s] = 1
+
+##################################################
+
+# 세팅
+stack = [1]                     # 방문예정지(스택)
+visited = set()                 # 방문기록지(집합)
+trail = []                      # 궤적을 담아줄 리스트
+
+##################################################
+
+while stack:
+    cur = stack.pop()
+    if cur not in visited:
+        trail.append(cur)
+    visited.add(cur)
+
+    for nxt in range(V + 1):
+        if adj_matrix[cur][nxt] and nxt not in visited:
+            stack.append(nxt)
+        
+    print(trail)
+
+### 인접 행렬 + 스택
+V, E = map(int, input().split())
+
+# 그래프 구조화
+
+# 1. 빈 판 만들기
+adj_lst = [[] for _ in range(V+1)]
+
+# 2. 간선정보 입력받기
+for _ in range(E):
+    s, e = map(int, input().split())
+    adj_lst[s].append(e)
+    adj_lst[e].append(s)
+
+##################################################
+
+# 세팅
+stack = [1]             # 방문예정지(스택)
+visited = set()         # 방문기록지(집합)
+trail = []              # 궤적을 담아줄 리스트
+
+##################################################
+
+while stack:                        # 스택이 빌 때까지
+    cur = stack.pop()               # 방문과
+    if cur not in visited:
+        trail.append(cur)
+    visited.add(cur)
+
+    for nxt in adj_lst[cur]:        # 탐색 반복
+        if nxt not in visited:
+            stack.append(nxt)
+
+## 입력
+# 7 8
+# 1 2
+# 1 3
+# 2 4
+# 2 5
+# 4 6
+# 5 6
+# 6 7
+# 3 7
+
+## 출력
+# [1, 3, 7, 6, 5, 2, 4]
